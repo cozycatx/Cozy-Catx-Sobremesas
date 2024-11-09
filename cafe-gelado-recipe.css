@@ -78,10 +78,11 @@ nav a {
 /* -------------------------------------------- MAIN -------------------------------------- */
 
 main {
-    flex: 1; /* Faz com que o main preencha o espaço disponível */
-    display: flex; /* Adicione isso se quiser centralizar o conteúdo dentro do main */
-    flex-direction: column; /* Para permitir a adição de outros elementos posteriormente */
+   display: flex;
+    justify-content: center;
+    padding: 100px; /* Garante 100px de padding em todos os lados */
 }
+
 .recipe-container {
     background-color: white;
     border-radius: 20px;
