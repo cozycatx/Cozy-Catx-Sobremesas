@@ -1,0 +1,220 @@
+body {
+    background-color: #FFD4E1;
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita o scroll horizontal */
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    font-family: 'Abril Fatface', sans-serif;
+    font-weight: 100;
+    font-size: 7vw;
+    margin: 20px 0 40px;
+    color: #8D263F;
+}
+
+/* -------------------------------------------- MENU -------------------------------------- */
+
+nav {
+    background-color: #FFFFFF;
+    padding: 15px 0;
+    box-shadow: 0px 2px 4px #6b6b6b;
+    border-radius: 100px 100px 0 0; /*vértices superiores arredondados */
+}
+
+/* container de navegação */
+.nav-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap;
+}
+
+/* links do menu */
+nav a {
+    text-decoration: none; /* para nao ter sublinhado, italico... */
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 15px; /* Reduzido para melhor responsividade */
+}
+
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* -------------------------------------------- TÍTULO CATEGORIA -------------------------------------- */
+
+.title-container {
+    background-color: #BE5770;
+    padding: 10px 10px; 
+    width: 100%; /* Defina uma largura máxima adequada para o contêiner */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+}
+
+.title-container h2 {
+    font-family: 'League Spartan', sans-serif; 
+    color: #ffffff; 
+    font-size: 35px; /* Tamanho da fonte do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin: 5px; /* Remove margens para evitar overflow */
+}
+
+/* -------------------------------------------- IMAGENS CATEGORIA -------------------------------------- */
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    box-sizing: border-box;
+    margin-bottom: 150px;
+    margin-top: 50px;
+    gap: 20px; /* Espaço de 20px entre cada image-item */
+}
+
+.img1-border, .img2-border {
+    width: 100%; /* A imagem ocupará todo o espaço do link */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+    padding: 20px 0; /* Padding em cima e embaixo */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+.main-container {
+    padding-bottom: 100px; /* Adiciona espaço até o rodapé */
+}
+
+.image-title-container {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: calc(100% - 100px);
+    box-sizing: border-box;
+    margin: 10px auto 0;
+    display: flex;
+    justify-content: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.image-title-container a {
+    color: inherit; /* Herda a cor do contêiner */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.image-title-container h4 {
+    color: #000000;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Efeito de hover para o container */
+.image-title-container:hover {
+    background-color: #f8f8f8cc; /* Cor de fundo mais clara ao passar o mouse */
+}
+
+.image-link {
+    flex: 1; /* Faz com que o link ocupe espaço flexível */
+    display: flex; /* Permite que o link contenha elementos flexíveis */
+    justify-content: center; /* Centraliza a imagem dentro do link */
+    align-items: center; /* Alinha verticalmente a imagem no link */
+    margin: 0px; /* Remove margem lateral */
+}
+
+a {
+    color: inherit; /* Faz com que a cor do link herde a cor do texto ao redor */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Para telas menores, ajusta o espaçamento */
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        align-items: center; /* Centraliza as imagens */
+    }
+    
+    .img1-border, .img2-border {
+        width: 90%; /* Aumenta a largura das imagens para caber na tela */
+        margin-bottom: 20px; /* Espaço entre as imagens */
+    }
+}
+
+
+/* -------------------------------------------- RODAPÉ -------------------------------------- */
+
+footer {
+    display: flex; /* Define o rodapé como um flex container */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    position: relative; /* Necessário para posicionar o h3 */
+    padding: 20px; /* Adiciona espaçamento interno */
+    background-color: #8D263F; /* Cor de fundo do rodapé */
+    padding-left: 100px; /* Espaço de 100px na borda esquerda do rodapé */
+    padding-right: 100px; /* Espaço de 100px na borda direita do rodapé */
+}
+
+h3 {
+    position: absolute; /* Posiciona o título de forma absoluta */
+    top: 20px; /* Distância do topo do rodapé */
+    left: 20px; /* Distância da esquerda do rodapé */
+    font-size: 20px; /* Tamanho do texto */
+    color: #ffffff; /* Cor do texto */
+    margin: 0; /* Remove a margem padrão */
+}
+
+.profile-picture-container {
+    display: flex; /* Define o contêiner das imagens e nomes como flex */
+    justify-content: space-around; /* Espaçamento igual entre os perfis */
+    margin-top: 40px; /* Distância do título até as imagens */
+}
+
+.profile-item {
+    display: flex; /* Usa flexbox para organizar a imagem e o nome */
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    align-items: center; /* Centraliza a imagem e o texto horizontalmente */
+    color: #ffffff;
+    margin: 0 50px; /* margem lateral entre as imagens */
+    font-size: 18px;
+}
+
+.profile-picture-container {
+    display: flex; /* Define o contêiner das imagens e nomes como flex */
+    justify-content: center; /* Ajusta o espaçamento entre os perfis */
+    margin-top: 40px; /* Distância do título até as imagens */
+    flex-wrap: wrap; /* Permite que os itens quebrem de linha se necessário */
+}
+
+.profile-picture-container img {
+    width: 80px; /* Largura das imagens */
+    height: 80px; /* Altura das imagens */
+    object-fit: cover; /* Preenche as imagens sem distorção */
+    border-radius: 50%;
+}
+
+/* Media query para ajustar os espaçamentos em telas menores */
+@media (max-width: 768px) {
+    footer {
+        padding-left: 20px; /* Diminui o padding lateral do rodapé */
+        padding-right: 20px; /* Diminui o padding lateral do rodapé */
+    }
+
+    .profile-item {
+        margin: 0 2px; /* Mantém a margem lateral entre as imagens em telas menores */
+    }
+}
+
+
+
+
+
+

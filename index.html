@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="logotipo_favicon.ico" type="image/x-icon"> <!-- icone ao lado do title -->
+    <link rel="stylesheet" href="style.css"> <!-- linka o html ao css -->
+
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+
+    <title> Cozy Catx - Sobremesas </title>
+
+</head>
+
+<body>
+    <header>
+
+        <h1>Cozy Catx</h1> <!-- titulo principal -->
+
+    <!----------------------------------------- MENU ----------------------------------------->    
+
+        <nav>
+            <!-- categorias linkaveis para os lugares da pagina principal do site-->
+            <div class="nav-container">
+                <a href="#home">Home</a>
+                <a href="#categorias">Categorias</a>
+                <a href="#novidades">Novidades</a>
+                <a href="#destaques">Destaques</a>
+                <a href="#sobre">Sobre</a>
+            </div>
+        </nav>
+
+    <!----------------------------------------- CARROSEL ----------------------------------------->
+
+        <!-- Contêiner do Slideshow -->
+        <div class="slideshow-container" id="categorias">
+
+            <!-- Imagens em tela cheia -->
+            <div class="slide-imagens fade">
+                <img src="img/bala_baiana_banner.png" class="slide-image">
+            </div>
+
+            <div class="slide-imagens fade">
+                <img src="img/biscoito_amanteigado_banner.png" class="slide-image">
+            </div>
+
+            <div class="slide-imagens fade">
+                <img src="img/bolo_de_cenoura_com_brigadeiro_banner.png" class="slide-image">
+            </div>
+
+            <div class="slide-imagens fade">
+                <img src="img/suspiro_banner.png" class="slide-image">
+            </div>
+
+            <div class="slide-imagens fade">
+                <img src="img/pudim_de_leite_banner.png" class="slide-image">
+            </div>
+
+            <div class="slide-imagens fade">
+                <img src="img/bolo_naked_cake_banner.png" class="slide-image">
+            </div>
+
+            <div class="slide-imagens fade">
+                <img src="img/biscoito_natalino_banner.png" class="slide-image">
+            </div>
+
+            <div class="slide-imagens fade">
+                <img src="img/torta_gelada_morango_banner.png" class="slide-image">
+            </div>
+
+            <div class="slide-imagens fade">
+                <img src="img/frappe_cafe_e_cafe_gelado_com_sorvete_banner.png" class="slide-image">
+            </div>
+
+            <!-- Botões de navegação -->
+            <a class="seta1" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="seta2" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+
+        <!-- Bolinhas de navegação -->
+        <div class="bolinhas-container">
+            <span class="bolinha" onclick="currentSlide(1)"></span>
+            <span class="bolinha" onclick="currentSlide(2)"></span>
+            <span class="bolinha" onclick="currentSlide(3)"></span>
+            <span class="bolinha" onclick="currentSlide(4)"></span>
+            <span class="bolinha" onclick="currentSlide(5)"></span>
+            <span class="bolinha" onclick="currentSlide(6)"></span>
+            <span class="bolinha" onclick="currentSlide(7)"></span>
+            <span class="bolinha" onclick="currentSlide(8)"></span>
+            <span class="bolinha" onclick="currentSlide(9)"></span>
+        </div>
+
+    </header>
+
+    <main>
+        
+        <!----------------------------------------- CATEGORIAS ----------------------------------------->
+
+        <div class="categories-container" id="novidades">
+            <div class="categories">
+
+                <div class="category">
+                    <a href="cafes.html">
+                        <img src="img/cafe_gelado_circulo.png" alt="Cafés">
+                        <p>Cafés</p>
+                    </a>
+                </div>
+
+                <div class="category">
+                    <a href="biscoitos.html">
+                        <img src="img/biscoito_natalino_circulo.png" alt="Biscoitos">
+                        <p>Biscoitos</p>
+                    </a>
+                </div>
+
+                <div class="category">
+                    <a href="bolos.html">
+                        <img src="img/bolo_naked_cake_circulo.png" alt="Bolos">
+                        <p>Bolos</p>
+                    </a>
+                </div>
+
+                <div class="category">
+                    <a href="docinhos.html">
+                        <img src="img/suspiro_circulo.png" alt="Docinhos">
+                        <p>Docinhos</p>
+                    </a>
+                </div>
+
+                <div class="category">
+                    <a href="gelados.html">
+                        <img src="img/torta_gelada_morango_circulo.png" alt="Gelados">
+                        <p>Gelados</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+<!----------------------------------------- NOVIDADES ----------------------------------------->
+
+<div class="container">
+    <div class="card_container">
+
+        <a href="biscoito-amanteigado-recipe.html" class="card">
+            <img src="img/biscoito_amanteigado.png" alt="Biscoito Amanteigado">
+            <div class="card_content">
+                <h4>BISCOITO AMANTEIGADO</h4>
+                <p> 
+                    Ingredientes: 6 <br>
+                    Tempo: 1h <br>
+                    Serve: 8 pessoas
+                </p>
+            </div>
+        </a>
+
+        <a href="frappe-cafe-recipe.html" class="card">
+            <img src="img/frappe_de_cafe.png" alt="Frappe de Café">
+            <div class="card_content">
+                <h4>FRAPPE DE CAFÉ</h4>
+                <p> 
+                    Ingredientes: 6 <br>
+                    Tempo: 15min <br>
+                    Serve: 2 pessoas
+                </p>
+            </div>
+        </a>
+
+        <a href="bolo-cenoura-recipe.html" class="card">
+            <img src="img/bolo_de_cenou_com_brigadeiro.png" alt="Bolo de Cenoura com Brigadeiro">
+            <div class="card_content" >
+                <h4>BOLO DE CENOURA</h4>
+                <p> 
+                    Ingredientes: 12 <br>
+                    Tempo: 3h <br>
+                    Serve: 12 pessoas
+                </p>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+
+
+<!----------------------------------------- DESTAQUES ----------------------------------------->
+
+        <div class="container" id="destaques" style=" margin-top: 50px; margin-bottom: 50px;">
+            <div class="main-video-container">
+                <div class="responsive-video">
+                    <iframe 
+                        src="https://www.youtube.com/embed/EsTErCfNt-8?si=DXN3ZHFi7i49fSQ6"
+                        title="Cookies Arco-Íris | Hello Kitty" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen
+                        class="main-video">
+                    </iframe>
+                </div>
+                
+                <h2 class="main-vid-title">Cookies Arco-Íris | Hello Kitty</h2>
+            </div>
+
+            <div class="video-list-container">
+                <div class="list active" data-video="https://www.youtube.com/embed/EsTErCfNt-8?si=DXN3ZHFi7i49fSQ6">
+                    <img src="img/rainbow_cookie.png" alt="Cookies Arco-Íris | Hello Kitty" class="list-image">
+                    <h2 class="list-title">Cookies Arco-Íris | Hello Kitty</h2>
+                </div>
+                <div class="list" data-video="https://www.youtube.com/embed/OHwZcdVRC9o?si=D8KFG3M-xHUaz03s">
+                    <img src="img/sushi_doce.png" alt="Comida Japonesa Feita de Doces | Hello Kitty" class="list-image">
+                    <h2 class="list-title">Comida Japonesa Feita de Doces | Hello Kitty</h2>
+                </div>
+                <div class="list" data-video="https://www.youtube.com/embed/A6bzLcuBlIM?si=tpMOmL-EovPEypD5">
+                    <img src="img/cinnamon_rolls.png" alt="Cinnamon Roll | Hello Kitty" class="list-image">
+                    <h2 class="list-title">Cinnamon Roll | Hello Kitty</h2>
+                </div>
+                <div class="list" data-video="https://www.youtube.com/embed/lTf0CluYSlg?si=XLIZHJuE8xukTvgK">
+                    <img src="img/cookies_de_coracao.png" alt="Cookies de Coração | Hello Kitty" class="list-image">
+                    <h2 class="list-title">Cookies de Coração | Hello Kitty</h2>
+                </div>
+                <div class="list" data-video="https://www.youtube.com/embed/HgDMfnynGFI?si=Nn9XY2vK_Aym4Tzx">
+                    <img src="img/cinnamonroll_cake_pop.png" alt="Bolo no Palito do Cinnamoroll | Hello Kitty" class="list-image">
+                    <h2 class="list-title">Bolo no Palito do Cinnamoroll | Hello Kitty</h2>
+                </div>
+                <div class="list" data-video="https://www.youtube.com/embed/GlDk2IAfrj8?si=l6VIKOZaMfa4ydo9">
+                    <img src="img/kuromi_donuts.png" alt="Donuts da Kuromi | Hello Kitty" class="list-image">
+                    <h2 class="list-title">Donuts da Kuromi | Hello Kitty</h2>
+                </div>
+                <div class="list" data-video="https://www.youtube.com/embed/qFfEECQbWG4?si=tTSHldZ3lHuxx5b_">
+                    <img src="img/keroppi_macarons.png" alt="Keroppi Macarons | Hello Kitty" class="list-image">
+                    <h2 class="list-title">Keroppi Macarons | Hello Kitty</h2>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+  
+
+<!----------------------------------------- RODAPÉ ----------------------------------------->
+
+    <footer>
+        <h3>Autoras</h3>
+        <div class="profile-picture-container" id="sobre">
+            <div class="profile-item">
+                <img src="img/ana.jpeg" alt="Ana Paula uma das Autoras" class="img-ana">
+                <p>⭐Ana⭐</p>
+            </div>
+            <div class="profile-item">
+                <img src="img/bia.jpeg" alt="Beatriz uma das Autoras" class="img-bia">
+                <p>⭐Beatriz⭐</p>
+            </div>
+            <div class="profile-item">
+                <img src="img/clara.jpeg" alt="Clara uma das Autoras" class="img-clara">
+                <p>⭐Clara⭐</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Vincula JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,492 @@
+body {
+    background-color: #FFD4E1;
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+/*--------------------------------------------TITULO--------------------------------------------*/
+
+h1 {
+    font-family: 'Abril Fatface', sans-serif;
+    font-weight: 100;
+    font-size: 7vw;
+    margin-bottom: 40px;
+    margin: 20px 0 40px;
+    color: #8D263F;
+}
+
+/*----------------------------------------MENU----------------------------------------*/
+
+nav {
+    background-color: #FFFFFF;
+    padding: 15px 0;
+    box-shadow: 0px 2px 4px #6b6b6b;
+    border-radius: 100px 100px 0 0; /* vértices superiores arredondados */
+    overflow: hidden; /* Impede que transborde */
+}
+
+.nav-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Estilo dos links do menu */
+nav a {
+    text-decoration: none; /* para nao ter sublinhado, italico... */
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ----------------------------------CARROSEL----------------------------------*/
+
+* {
+    box-sizing: border-box; /* Define o modelo de caixa = padding + border no cálculo de largura e altura */
+}
+
+/* Contêiner do Carrossel */
+.slideshow-container {
+    max-width: 100%; /* largura máxima do contêiner = 100% da largura do elemento pai */
+    position: relative; /* Permite posicionar os elementos setas (filhos) em relação a este contêiner */
+    margin: auto; /* Centraliza o contêiner horizontalmente */
+    min-height: 60vh; /* Define a altura mínima = 60% da janela */
+    overflow: hidden; /* nada sai do contêiner */
+    margin-bottom: -20px; /* Reduz a margem inferior */
+}
+
+/* Oculta os slides */
+.slide-imagens {
+    display: none; 
+}
+
+
+.slide-image {
+    width: 100%; /*largura = 100% do contêiner */
+    height: 450px; /* altura fixa */
+    object-fit: cover; /* imagem preenche o contêiner c/ proporção */
+    position: relative; 
+}
+
+/* Botões de navegação */
+.seta1, .seta2 {
+    cursor: pointer; /* Altera o cursor para uma mão ao passar em cima do botão */
+    position: absolute; /* Permite posicionar os botões em relação ao contêiner pai */
+    top: 50%; /* botões no centro vertical do contêiner */
+    transform: translateY(-50%); /* Ajusta a posição vertical para centralizar */
+    color: white; 
+    font-weight: bold; 
+    font-size: 1.5em; /* Define o tamanho da fonte dos botões */
+    transition: 1s ease; /* transição suave */
+    user-select: none; /* Impede que o texto dos botões seja selecionado */
+    width: 8%; /* afina os botões */
+    text-align: center; 
+}
+
+.seta1 {
+    left: 0; 
+}
+
+.seta2 {
+    right: 0; 
+}
+
+
+.bolinhas-container {
+    position:relative; 
+    bottom: 10px; /* distância da imagem */
+    left: 50%; /*borda esquerda das bolinhas no centro do contêiner */
+    transform: translateX(-50%); /* Ajusta a horizontalmente para centralizar as bolinhas */
+    text-align: center; 
+    z-index: 1; /* Garante que as bolinhas fiquem acima de outros elementos */
+}
+
+.bolinha {
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre a bolinha */
+    height: 10px; 
+    width: 10px; 
+    margin: 0 3px; /* margem entre as bolinhas */
+    background-color: transparent; 
+    border-radius: 50%; /* círculo */
+    border: 1px solid #ffffff; /* borda */
+    display: inline-block; /* bolinhas em linha */
+    transition: background-color 0.6s ease; /* transição suave */
+}
+
+.bolinha.active, .bolinha:hover {
+    background-color: #ffffff; 
+    border-color: #ffffff; 
+}
+
+/* Animação de desvanecimento */
+.fade {
+    animation: fade 2s; /* Aplica a animação de desvanecimento */
+}
+
+@keyframes fade {
+    from {opacity: 0.4} /* opacidade inicial */
+    to {opacity: 1} /* opacidade final */
+}
+
+
+@media (max-width: 768px) {
+    .seta1, .seta2 {
+        font-size: 1.5em; 
+        padding: 0.5em; 
+        width: 12%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .seta1, .seta2 {
+        font-size: 1.2em; 
+        padding: 0.3em; 
+        width: 15%; 
+    }
+}
+
+
+
+/* ------------------------------------CATEGORIAS------------------------------------ */
+
+
+.categories-container {
+    background-color: #8D263F; 
+    padding: 15px; 
+    min-height: 80px; 
+    border-radius: 100px; 
+    box-shadow: 0px 2px 4px #6b6b6b; 
+    max-width: 1200px;
+    margin: 30px auto; /* Centraliza o retângulo */
+    display: flex; /* centralizar itens (flexbox) */
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.categories {
+    display: flex; /* categorias lado a lado */
+    gap: 110px; /* Espaçamento entre as bolinhas */
+    justify-content: center; 
+    padding: 0px; /* Remover padding = s/ aumento da altura */
+    flex-wrap: wrap; /* Permite que as bolinhas quebrem de linha em telas pequenas */
+}
+
+/* Animação */
+.categories:hover > :not(:hover){
+    opacity: .4;
+    transform: scale(0.9);
+}
+
+/* bolinha */
+.category {
+    display: flex; 
+    flex-direction: column; /* imagem acima do texto */
+    align-items: center; 
+    text-align: center;
+    height: 112px; 
+    transition: .35s;
+    cursor: pointer;
+}
+
+
+/* imagens dentro das bolinhas */
+.category img {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; /* imagem redonda */
+    object-fit: cover; /* preencher a bolinha sem distorção */
+}
+
+/* texto abaixo de cada imagem de categoria */
+.category p {
+    margin-top: 10px; /* espaçamento entre a imagem e texto */
+    margin-bottom: 0px;
+    font-size: 20px; 
+    font-weight: bold;
+    font-family: 'League Spartan', sans-serif; 
+    color: #ffffff; 
+}
+
+a {
+    color: inherit; /* Faz com que a cor do link herde a cor do texto ao redor */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+
+@media (max-width: 600px) {
+    .categories {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+
+/*------------------------------------------ NOVIDADES ------------------------------------------*/
+
+/* Container para centralizar a linha de cards */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 0 15px; /* Espaço extra para que os cards fiquem colados nas laterais */
+}
+
+.card_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* quebra de linha quando o espaço acaba */
+    gap: 30px; /* Espaçamento entre os cards */
+    max-width: 1200px; 
+    margin-top: 0px;
+}
+
+.card {
+    width: 325px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card_content {
+    padding: 20px;
+}
+
+.card_content h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card_content p {
+    font-size: 20px;
+    color: #6b6b6b;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .card_container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/*------------------------------------------ DESTAQUES ------------------------------------------*/
+
+* {
+    font-family: 'League Spartan', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: nowrap; /* Impede a quebra de linha */
+    align-items: stretch; /* Garante que todos os filhos tenham a mesma altura */
+    gap: 20px;
+}
+
+.container .main-video-container {
+    flex: 1 1 700px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 15px;
+}
+
+.container .main-video-container .main-vid-title {
+    font-size: 20px;
+    color: #000000;
+    text-align: left; /* Centraliza o texto horizontalmente */
+    padding-top: 20px; 
+}
+
+/* Responsividade para o iframe */
+.responsive-video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Proporção de 16:9 */
+    overflow: hidden;
+    display: flex; 
+    justify-content: center; 
+}
+
+.responsive-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    max-width: 100%; /* Impede que o vídeo ultrapasse o tamanho do container */
+    max-height: 100%; /* Impede que o vídeo ultrapasse o tamanho do container */
+    border-radius: 5px; 
+}
+
+.container .video-list-container {
+    flex: 1 1 350px;
+    height: 485px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px #FFD4E1;
+    background-color: transparent;
+    padding: 15px;
+}
+
+.container .video-list-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.container .video-list-container::-webkit-scrollbar-track {
+    background-color: #FFD4E1;
+    border-radius: 5px;
+}
+
+.container .video-list-container::-webkit-scrollbar-thumb {
+    background-color: #8D263F;
+    border-radius: 5px;
+}
+
+.container .video-list-container .list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.container .video-list-container .list img.list-image {
+    width: 100px; 
+    height: auto; /* Mantenha a proporção da imagem */
+    border-radius: 5px; 
+}
+
+.container .video-list-container .list.active {
+    background-color: #BE5770;
+}
+
+.container .video-list-container .list.active .list-title {
+    color: #ffffff;
+}
+
+.container .video-list-container .list .list-title {
+    font-size: 17px;
+    color: #000000;
+}
+
+@media (max-width:1200px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media (max-width:450px) {
+    .container .main-video-container .main-vid-title {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .container .video-list-container .list {
+        flex-flow: column;
+        gap: 10px;
+    }
+
+    .container .video-list-container .list .list-title {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+/*------------------------------------------RODAPÉ------------------------------------------*/
+
+footer {
+    display: flex; /* flex container */
+    flex-direction: column; 
+    position: relative; /* Necessário para posicionar o h3 */
+    padding: 20px; /* espaçamento interno */
+    background-color: #8D263F; 
+    padding-left: 100px; 
+    padding-right: 100px; 
+
+}
+
+h3 {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    font-size: 20px; 
+    color: #ffffff; 
+    margin: 0; /* Remove a margem padrão */
+}
+
+.profile-picture-container {
+    display: flex; 
+    justify-content: space-around; /* Espaçamento igual entre os perfis */
+    margin-top: 40px; /* Distância do título até as imagens */
+}
+
+.profile-item {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    color: #ffffff;
+    margin: 0 50px; /* margem lateral entre as imagens */
+}
+
+.profile-picture-container {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 40px; 
+    flex-wrap: wrap; /* Permite que os itens quebrem de linha se necessário */
+}
+
+.profile-picture-container img {
+    width: 80px; 
+    height: 80px; 
+    object-fit: cover; /* Preenche as imagens sem distorção */
+    border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+    footer {
+        padding-left: 20px; 
+        padding-right: 20px; 
+    }
+
+    .profile-item {
+        margin: 0 2px;
+    }
+}

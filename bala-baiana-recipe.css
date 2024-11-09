@@ -1,0 +1,146 @@
+html, body {
+    height: 100%; /* Garante que o corpo ocupe toda a altura da tela */
+    margin: 0; /* Remove margens padrão */
+}
+
+body {
+    display: flex; /* Torna o body um flex container */
+    flex-direction: column; /* Organiza os filhos (header, main, footer) em coluna */
+    background-color: #FFD4E1;
+    font-family: 'League Spartan', sans-serif;
+    overflow-x: hidden; /* Evita o scroll horizontal */
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    font-family: 'Abril Fatface', sans-serif;
+    font-weight: 100;
+    font-size: 7vw;
+    margin: 20px 0 40px;
+    color: #8D263F;
+}
+
+/* -------------------------------------------- MENU -------------------------------------- */
+
+nav {
+    background-color: #FFFFFF;
+    padding: 15px 0;
+    box-shadow: 0px 2px 4px #6b6b6b;
+    border-radius: 100px 100px 0 0; /* vértices superiores arredondados */
+}
+
+/* container de navegação */
+.nav-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap;
+}
+
+/* links do menu */
+nav a {
+    text-decoration: none; /* para não ter sublinhado, itálico... */
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 15px; /* Reduzido para melhor responsividade */
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* -------------------------------------------- TÍTULO RECEITA -------------------------------------- */
+
+.title-container {
+    background-color: #BE5770;
+    padding: 10px 10px; 
+    width: 100%; /* Defina uma largura máxima adequada para o contêiner */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+}
+
+.title-container h2 {
+    font-family: 'League Spartan', sans-serif; 
+    color: #ffffff; 
+    font-size: 35px; /* Tamanho da fonte do texto */
+    text-align: center; /* Alinha o texto à esquerda */
+    margin: 5px; /* Remove margens para evitar overflow */
+}
+
+/* -------------------------------------------- MAIN -------------------------------------- */
+
+main {
+    flex: 1; /* Faz com que o main preencha o espaço disponível */
+    display: flex; /* Adicione isso se quiser centralizar o conteúdo dentro do main */
+    flex-direction: column; /* Para permitir a adição de outros elementos posteriormente */
+}
+
+/* -------------------------------------------- RODAPÉ -------------------------------------- */
+
+footer {
+    display: flex; /* Define o rodapé como um flex container */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    position: relative; /* Necessário para posicionar o h3 */
+    padding: 20px; /* Adiciona espaçamento interno */
+    background-color: #8D263F; /* Cor de fundo do rodapé */
+    padding-left: 100px; /* Espaço de 100px na borda esquerda do rodapé */
+    padding-right: 100px; /* Espaço de 100px na borda direita do rodapé */
+}
+
+h3 {
+    position: absolute; /* Posiciona o título de forma absoluta */
+    top: 20px; /* Distância do topo do rodapé */
+    left: 20px; /* Distância da esquerda do rodapé */
+    font-size: 20px; /* Tamanho do texto */
+    color: #ffffff; /* Cor do texto */
+    margin: 0; /* Remove a margem padrão */
+}
+
+.profile-picture-container {
+    display: flex; /* Define o contêiner das imagens e nomes como flex */
+    justify-content: space-around; /* Espaçamento igual entre os perfis */
+    margin-top: 40px; /* Distância do título até as imagens */
+}
+
+.profile-item {
+    display: flex; /* Usa flexbox para organizar a imagem e o nome */
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    align-items: center; /* Centraliza a imagem e o texto horizontalmente */
+    color: #ffffff;
+    margin: 0 50px; /* margem lateral entre as imagens */
+    font-size: 18px;
+}
+
+.profile-picture-container {
+    display: flex; /* Define o contêiner das imagens e nomes como flex */
+    justify-content: center; /* Ajusta o espaçamento entre os perfis */
+    margin-top: 40px; /* Distância do título até as imagens */
+    flex-wrap: wrap; /* Permite que os itens quebrem de linha se necessário */
+}
+
+.profile-picture-container img {
+    width: 80px; /* Largura das imagens */
+    height: 80px; /* Altura das imagens */
+    object-fit: cover; /* Preenche as imagens sem distorção */
+    border-radius: 50%;
+}
+
+/* Media query para ajustar os espaçamentos em telas menores */
+@media (max-width: 768px) {
+    footer {
+        padding-left: 20px; /* Diminui o padding lateral do rodapé */
+        padding-right: 20px; /* Diminui o padding lateral do rodapé */
+    }
+
+    .profile-item {
+        margin: 0 2px; /* Mantém a margem lateral entre as imagens em telas menores */
+    }
+}
